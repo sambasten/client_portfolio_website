@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "s3_origin" {
     bucket = var.s3_bucket_name
+    force_destroy = true
 
     tags = {
       Name = var.s3_bucket_name

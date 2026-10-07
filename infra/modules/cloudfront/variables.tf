@@ -10,3 +10,7 @@ variable "s3_origin_id" {
 variable "s3_origin_regional_domain_name" {
     description = "regional domain name from s3 origin"
 }
+
+variable "cf_oac_id" {
+    description = "cloudfront dist oac id"
+}

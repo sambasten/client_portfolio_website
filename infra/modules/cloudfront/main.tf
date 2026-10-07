@@ -2,6 +2,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     origin {
         domain_name = var.s3_origin_regional_domain_name
         origin_id = var.s3_origin_id
+        origin_access_control_id = var.cf_oac_id
     }
 
     enabled             = true
@@ -46,4 +47,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     viewer_certificate {
         cloudfront_default_certificate = true
     }
+}
+
+//OAC for S3 : required for private bucket
+resource "aws_cloudfront_origin_access_control" "cf_oac" {
+  name                              = "CF OAC for S3 bucket"
+  description                       = "CF Origin Access Control for S3 bucket"
+  origin_access_control_origin_type = "s3"
+  signing_behavior                  = "always"
+  signing_protocol                  = "sigv4"
 }

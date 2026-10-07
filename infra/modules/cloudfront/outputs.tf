@@ -7,3 +7,8 @@ output "cloudfront_url" {
     description = "cloudfront final output url"
     value = aws_cloudfront_distribution.s3_distribution.domain_name
 }
+
+output "cloudfront_oac_id" {
+    description = "cloudfront dist oac id"
+    value = aws_cloudfront_origin_access_control.cf_oac.id
+}

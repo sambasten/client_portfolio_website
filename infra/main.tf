@@ -11,6 +11,7 @@ module "cloudfront" {
 
     s3_origin_id = module.s3_bucket.s3_origin_id
     s3_origin_regional_domain_name = module.s3_bucket.s3_origin_regional_domain_name
+    cf_oac_id = module.cloudfront.cloudfront_oac_id
 }
 
 //S3 bucket pilocy {moved to main so it can consume cloudfront dist ARN as input}
