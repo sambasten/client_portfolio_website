@@ -45,3 +45,5 @@ By completing this project, you will:
 - **Cloud Provider:** AWS
 - **Content Delivery:** Amazon CloudFront
 - **Version Control:** GitHub
+
+## Loom Link: https://www.loom.com/share/7e7afff0f2c440649818fdb5c7f5a076
