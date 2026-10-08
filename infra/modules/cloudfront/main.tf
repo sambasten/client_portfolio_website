@@ -5,7 +5,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
         origin_access_control_id = var.cf_oac_id
     }
 
-    enabled             = true
+    enabled             = true //serves content as soon as it's deployed
     is_ipv6_enabled     = true
     comment             = "Some comment"
     default_root_object = "index.html"
